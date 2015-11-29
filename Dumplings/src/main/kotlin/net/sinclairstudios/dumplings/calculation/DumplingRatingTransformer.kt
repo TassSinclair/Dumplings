@@ -1,13 +1,10 @@
 package net.sinclairstudios.dumplings.calculation
 
 
-import java.io.Serializable
-import net.sinclairstudios.dumplings.domain.DumplingServingCalculation
-import java.util.ArrayList
-import net.sinclairstudios.dumplings.domain.Fraction
 import net.sinclairstudios.dumplings.domain.DumplingRating
+import net.sinclairstudios.dumplings.domain.DumplingServingCalculation
 import net.sinclairstudios.dumplings.domain.DumplingServings
-import java.util.Collections
+import net.sinclairstudios.dumplings.domain.Fraction
 
 public class DumplingRatingTransformer(private val equaliser : DumplingCalculationEqualiser) {
 

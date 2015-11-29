@@ -41,9 +41,9 @@ public open class Fraction(val numerator: Int, val denominator: Int) : Comparabl
         return "$numerator/$denominator"
     }
 
-    override fun equals(that: Any?): Boolean {
-        return that is Fraction
-            && equals(that)
+    override fun equals(other: Any?): Boolean {
+        return other is Fraction
+            && equals(other)
     }
 
     public fun equals(that: Fraction): Boolean {

@@ -7,9 +7,9 @@ public open class Dumpling(val name: String): Serializable {
         return "$name dumpling"
     }
 
-    public override fun equals(o: Any?): Boolean {
-        return o is Dumpling
-            && equals(o)
+    public override fun equals(other: Any?): Boolean {
+        return other is Dumpling
+            && equals(other)
     }
 
     public fun equals(that: Dumpling): Boolean {

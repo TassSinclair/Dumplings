@@ -1,22 +1,18 @@
 package net.sinclairstudios.dumplings.calculation
 
-
-import java.io.Serializable
 import net.sinclairstudios.dumplings.domain.DumplingServingCalculation
-import java.util.ArrayList
-import net.sinclairstudios.dumplings.domain.Fraction
 
 public open class DumplingCalculationEqualiser {
 
     public open fun equalise(dumplingServingCalculations : List<DumplingServingCalculation>) {
 
-        var filteredQuantities = filterCalculationsWithRemainders(dumplingServingCalculations)
-        while (filteredQuantities.size() > 1)
+        var withRemainders = filterCalculationsWithRemainders(dumplingServingCalculations)
+        while (!withRemainders.isEmpty())
         {
-            val remainder = findLowestRemainder(filteredQuantities).trimRemainder()
-            findHighestRemainder(filteredQuantities).addServings(remainder)
+            val remainder = findLowestRemainder(withRemainders).trimRemainder()
+            findHighestRemainder(withRemainders).addServings(remainder)
 
-            filteredQuantities = filterCalculationsWithRemainders(filteredQuantities)
+            withRemainders = filterCalculationsWithRemainders(withRemainders)
         }
     }
 

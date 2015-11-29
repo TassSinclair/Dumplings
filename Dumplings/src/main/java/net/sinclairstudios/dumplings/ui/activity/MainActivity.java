@@ -4,15 +4,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.*;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.view.*;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.ViewById;
-import com.googlecode.androidannotations.annotations.res.StringRes;
+import android.view.Menu;
+import android.view.MenuItem;
 import net.sinclairstudios.dumplings.R;
 import net.sinclairstudios.dumplings.ui.widgets.MainActivityPagerAdapter;
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.res.StringRes;
 
 @EActivity(R.layout.main_layout)
 public class MainActivity extends FragmentActivity {

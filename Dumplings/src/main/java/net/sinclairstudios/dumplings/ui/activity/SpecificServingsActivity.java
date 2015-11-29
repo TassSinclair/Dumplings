@@ -1,26 +1,22 @@
 package net.sinclairstudios.dumplings.ui.activity;
 
 import android.annotation.TargetApi;
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.*;
-
-import com.example.android.swipedismiss.SwipeDismissListViewTouchListener;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.EActivity;
-
-import com.googlecode.androidannotations.annotations.ViewById;
+import android.widget.ListView;
 import net.sinclairstudios.dumplings.R;
-import net.sinclairstudios.dumplings.domain.*;
+import net.sinclairstudios.dumplings.domain.Dumpling;
+import net.sinclairstudios.dumplings.domain.DumplingDefaults;
+import net.sinclairstudios.dumplings.domain.DumplingServings;
 import net.sinclairstudios.dumplings.ui.widgets.DismissArrayAdapterItemListViewTouchListener;
-import net.sinclairstudios.dumplings.ui.widgets.DumplingRatingAdapter;
 import net.sinclairstudios.dumplings.ui.widgets.DumplingServingAdapter;
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 

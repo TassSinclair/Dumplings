@@ -1,6 +1,5 @@
 package net.sinclairstudios.dumplings.domain
 
-public trait HasDumpling {
-
+public interface HasDumpling {
     var dumpling: Dumpling
 }

@@ -7,7 +7,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.view.MenuItem;
 import android.view.View;
-import com.googlecode.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.EActivity;
 import net.sinclairstudios.dumplings.R;
 
 @EActivity(R.layout.about_layout)

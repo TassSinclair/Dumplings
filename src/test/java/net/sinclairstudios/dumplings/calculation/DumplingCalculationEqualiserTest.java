@@ -10,8 +10,7 @@ import java.util.Arrays;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
 
 
 public class DumplingCalculationEqualiserTest extends TestCase {

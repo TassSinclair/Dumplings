@@ -7,7 +7,7 @@ public open class DumplingCalculationEqualiser {
     public open fun equalise(dumplingServingCalculations : List<DumplingServingCalculation>) {
 
         var withRemainders = filterCalculationsWithRemainders(dumplingServingCalculations)
-        while (!withRemainders.isEmpty())
+        while (withRemainders.size > 1)
         {
             val remainder = findLowestRemainder(withRemainders).trimRemainder()
             findHighestRemainder(withRemainders).addServings(remainder)

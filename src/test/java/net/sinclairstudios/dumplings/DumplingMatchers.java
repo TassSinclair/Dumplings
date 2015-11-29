@@ -1,9 +1,6 @@
 package net.sinclairstudios.dumplings;
 
-import net.sinclairstudios.dumplings.domain.Dumpling;
-import net.sinclairstudios.dumplings.domain.DumplingServingCalculation;
-import net.sinclairstudios.dumplings.domain.DumplingServings;
-import net.sinclairstudios.dumplings.domain.Fraction;
+import net.sinclairstudios.dumplings.domain.*;
 import org.hamcrest.CustomTypeSafeMatcher;
 import org.hamcrest.Matcher;
 
@@ -45,12 +42,12 @@ public class DumplingMatchers {
         };
     }
 
-    public static Matcher<DumplingServings> servingsWithNameAndServings(final String name, final int servings) {
-        return new CustomTypeSafeMatcher<DumplingServings>("Dumpling " + name + " with " + servings + " servings") {
+    public static Matcher<DumplingOrder> orderWithNameAndServings(final String name, final int servings) {
+        return new CustomTypeSafeMatcher<DumplingOrder>("Dumpling " + name + " with " + servings + " servings") {
             @Override
-            protected boolean matchesSafely(DumplingServings dumplingServings) {
-                return dumplingServings.getDumpling().getName().equals(name)
-                        && dumplingServings.getServings() == servings;
+            protected boolean matchesSafely(DumplingOrder dumplingOrder) {
+                return dumplingOrder.getServings().getDumpling().getName().equals(name)
+                        && dumplingOrder.getServings().getServings() == servings;
             }
         };
     }

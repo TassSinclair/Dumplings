@@ -43,17 +43,17 @@ public class DumplingsServingsDataControllerTest extends TestCase {
 
     public void testDepopulatesToSharedPreferences() {
 
-        ArrayList<DumplingServings> servings = (ArrayList<DumplingServings>) Arrays.asList(
+        ArrayList<DumplingServings> servings = new ArrayList<>(Arrays.asList(
                 new DumplingServings(new Dumpling("Potato"), 34),
                 new DumplingServings(new Dumpling("Pork"), 2),
                 new DumplingServings(new Dumpling("Pineapple"), 0)
-        );
+        ));
         SharedPreferences.Editor mockEditor = mock(SharedPreferences.Editor.class);
 
         dataController.set(servings);
         dataController.depopulate(mockEditor);
 
         verify(mockEditor).putString(DumplingServings.class.getName(),
-                "Potato:34;Pork:2;Pineapple:0");
+                "Potato:34;Pork:2;Pineapple:0;");
     }
 }
